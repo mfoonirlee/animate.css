@@ -151,4 +151,17 @@
   </div>
 </main><!-- /.site__content -->
 
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script></body></html>
+<script>
+  document.onload = function(){
+    var dom = document.querySelector('#animationSandbox');
+    var select = document.querySelector('.js--animations')
+    select.addEventListener('change',function(){
+      var cls = select.value;
+      dom.className = cls + ' animated';
+      dom.addEventListener('animationend', function(){
+        dom.className = '';
+      })
+    })  
+  }
+
+</script>

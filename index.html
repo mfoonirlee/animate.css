@@ -152,16 +152,16 @@
 </main><!-- /.site__content -->
 
 <script>
-  document.onreadystatechange = function(){
-    var dom = document.querySelector('#animationSandbox');
-    var select = document.querySelector('.js--animations')
-    select.addEventListener('change',function(){
-      var cls = select.value;
-      dom.className = cls + ' animated';
-      dom.addEventListener('animationend', function(){
-        dom.className = '';
-      })
-    })  
-  }
+
+  var dom = document.querySelector('#animationSandbox');
+  var select = document.querySelector('.js--animations')
+  select.addEventListener('change',function(){
+    var cls = select.value;
+    dom.className = cls + ' animated';
+    dom.addEventListener('animationend', function(){
+      dom.className = '';
+    })
+  })  
+
 
 </script>
